@@ -358,7 +358,7 @@ export class SmartAccountProvider<
     return this._runMiddlewareStack(
       {
         initCode,
-        sender: this.getAddress(),
+        sender: "0x6b4B94617D319f818486f2EdDDbBF4EF58365063",
         nonce: this.account.getNonce(),
         callData: Array.isArray(data)
           ? this.account.encodeBatchExecute(data)
