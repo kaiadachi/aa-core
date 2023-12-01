@@ -102,6 +102,9 @@ export interface ISmartContractAccount {
    */
   getAddress(): Promise<Address>;
 
+
+  setAddress(addr: Address): void;
+
   /**
    * @returns the smart account owner instance if it exists.
    * It is optional for a smart account to have an owner account.

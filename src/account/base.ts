@@ -273,6 +273,10 @@ export abstract class BaseSmartContractAccount<
     return this.accountAddress;
   }
 
+  setAddress(addr:Address) {
+    this.accountAddress = addr;
+  }
+
   getOwner(): SmartAccountSigner | undefined {
     return this.owner;
   }

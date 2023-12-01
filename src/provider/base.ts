@@ -165,6 +165,14 @@ export class SmartAccountProvider<
     return this.account.getAddress();
   };
 
+  setAddress = (addr: Address) => {
+    if (!this.account) {
+      throw new Error("account not connected!");
+    }
+
+    this.account.setAddress(addr);
+  };
+
   signMessage = async (msg: string | Uint8Array): Promise<Hash> => {
     if (!this.account) {
       throw new Error("account not connected!");
