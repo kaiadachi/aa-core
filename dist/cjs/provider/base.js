@@ -113,6 +113,17 @@ class SmartAccountProvider extends eventemitter3_1.default {
                 return this.account.getAddress();
             }
         });
+        Object.defineProperty(this, "setAddress", {
+            enumerable: true,
+            configurable: true,
+            writable: true,
+            value: (addr) => {
+                if (!this.account) {
+                    throw new Error("account not connected!");
+                }
+                this.account.setAddress(addr);
+            }
+        });
         Object.defineProperty(this, "signMessage", {
             enumerable: true,
             configurable: true,

@@ -21,6 +21,7 @@ export interface ISmartContractAccount {
     signMessageWith6492(msg: string | Uint8Array | Hex): Promise<Hex>;
     signTypedDataWith6492(params: SignTypedDataParams): Promise<Hash>;
     getAddress(): Promise<Address>;
+    setAddress(addr: Address): void;
     getOwner(): SmartAccountSigner | undefined;
     getFactoryAddress(): Address;
     getEntryPointAddress(): Address;

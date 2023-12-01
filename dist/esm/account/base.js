@@ -162,6 +162,9 @@ export class BaseSmartContractAccount {
         }
         return this.accountAddress;
     }
+    setAddress(addr) {
+        this.accountAddress = addr;
+    }
     getOwner() {
         return this.owner;
     }

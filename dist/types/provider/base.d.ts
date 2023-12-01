@@ -20,6 +20,7 @@ export declare class SmartAccountProvider<TTransport extends SupportedTransports
         params?: any[];
     }) => Promise<any>;
     getAddress: () => Promise<`0x${string}`>;
+    setAddress: (addr: Address) => void;
     signMessage: (msg: string | Uint8Array) => Promise<Hash>;
     signTypedData: (params: SignTypedDataParams) => Promise<Hash>;
     signMessageWith6492: (msg: string | Uint8Array) => Promise<`0x${string}`>;
