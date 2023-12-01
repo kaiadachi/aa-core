@@ -90,7 +90,7 @@ export declare abstract class BaseSmartContractAccount<TTransport extends Suppor
     getNonce(): Promise<bigint>;
     getInitCode(): Promise<Hex>;
     getAddress(): Promise<Address>;
-    setAddress(addr: Address): void;
+    setAddress(addr: Address): Promise<void>;
     getOwner(): SmartAccountSigner | undefined;
     getFactoryAddress(): Address;
     getEntryPointAddress(): Address;

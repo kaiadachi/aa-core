@@ -162,7 +162,7 @@ export class BaseSmartContractAccount {
         }
         return this.accountAddress;
     }
-    setAddress(addr) {
+    async setAddress(addr) {
         this.accountAddress = addr;
     }
     getOwner() {
