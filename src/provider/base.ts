@@ -476,6 +476,7 @@ export class SmartAccountProvider<
       );
     }
 
+    request.verificationGasLimit = `0x32000`;
     request.signature = (await this.account.signUserOperationHash(
       getUserOperationHash(
         request,

@@ -379,6 +379,7 @@ export class SmartAccountProvider extends EventEmitter {
                 if (!isValidRequest(request)) {
                     throw new Error(`Request is missing parameters. All properties on UserOperationStruct must be set. uo: ${JSON.stringify(uoStruct, null, 2)}`);
                 }
+                request.verificationGasLimit = `0x32000`;
                 request.signature = (await this.account.signUserOperationHash(getUserOperationHash(request, this.getEntryPointAddress(), BigInt(this.chain.id))));
                 return {
                     hash: await this.rpcClient.sendUserOperation(request, this.getEntryPointAddress()),
