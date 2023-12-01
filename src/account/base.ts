@@ -273,7 +273,7 @@ export abstract class BaseSmartContractAccount<
     return this.accountAddress;
   }
 
-  async setAddress(addr:Address) {
+  setAddress(addr:Address) {
     this.accountAddress = addr;
   }
 
