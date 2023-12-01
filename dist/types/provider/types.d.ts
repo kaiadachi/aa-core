@@ -176,6 +176,7 @@ export interface ISmartAccountProvider<TTransport extends SupportedTransports = 
      * @returns the address of the connected account
      */
     getAddress: () => Promise<Address>;
+    setAddress(addr: Address): void;
     /**
      * @returns the EntryPoint contract address being used for the provider.
      *
